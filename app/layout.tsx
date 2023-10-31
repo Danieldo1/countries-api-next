@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunitoSans.className}>
-        <main className='bg-gray-100 min-h-screen flex flex-col items-center'>
-          <nav className='w-full bg-white h-16 flex items-center justify-center fixed'>
-            <section className=' flex items-center gap-3'>
+        <main className="bg-gray-100 min-h-screen flex flex-col items-center">
+          <nav className="w-full bg-white h-16 flex items-center justify-center">
+            <section className="container flex items-center gap-3">
               <Link href="/">
               <h1 className='font-bold text-2xl'><span className='text-4xl'>🌎</span> Find Country Info</h1>
               </Link>
@@ -28,7 +28,6 @@ export default function RootLayout({
           </nav>
         {children}
         </main>
-        
         </body>
     </html>
   )
