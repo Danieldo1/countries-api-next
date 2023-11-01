@@ -8,6 +8,9 @@ const nunitoSans = Nunito_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Find Country Info',
   description: 'Find a cool info about countries',
+  icons: {
+    icon: 'https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/256/globe-icon.png',
+  },
 }
 
 export default function RootLayout({
@@ -22,7 +25,7 @@ export default function RootLayout({
           <nav className="w-full bg-white h-16 flex items-center justify-center">
             <section className="container flex items-center gap-3">
               <Link href="/">
-              <h1 className='font-bold text-2xl'><span className='text-4xl'>🌎</span> Find Country Info</h1>
+              <h1 className='font-bold text-2xl  justify-center items-center flex flex-1 '><span className='text-4xl'>🌎</span> Find Country Info</h1>
               </Link>
             </section>
           </nav>

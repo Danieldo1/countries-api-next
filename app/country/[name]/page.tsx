@@ -32,14 +32,13 @@ export default async function Country({params: {name}}: {params: {name: string}}
     const borderCountry = await getCountryBordersByName(decodeURI(name))
     const formatter = new Intl.NumberFormat('en-US', {
         notation: 'compact',
-       
     })
+    const fomattedPopulation = new Intl.NumberFormat()
+
     return(
         <section className="flex flex-col container">
             <h1 className="text-5xl font-bold text-center text-gray-800 mt-16">{country.name.common}</h1>
             <Link href='/'>
-                {/* <Image src='/arrow.svg' alt='arrow' width={24} height={24} className="ml-1" />
-                <h1>Back</h1> */}
                 <div className="flex items-center mb-2 pl-2">
                 <ArrowLeftCircleIcon className="h-7 w-7 text-indigo-700" />
                 <p className="ml-0.5 font-medium text-indigo-700">Back</p>
@@ -64,9 +63,20 @@ export default async function Country({params: {name}}: {params: {name: string}}
                     )) }
                     </h2>
                     )}
+                    {country.area && (
+                        <h2 className="text-xl text-gray-800 mt-3"><b>🗺️ Area:</b>{" "}{fomattedPopulation.format(parseInt(country.area))} km2</h2>
+                    )}
                 </section>
-            <div className="relative h-48 my-2 md:h-auto w-96 shadow-md md:order-last order-first">
-                <Image src={country.flags.svg} alt={country.name.common} fill/>
+                    <div>
+                    {country.latlng && (
+                        <div>
+                    <h2 className="text-xl text-gray-800 mt-3"><b>📍 Maps:</b>{" "} </h2>
+                    < iframe src={`//maps.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}&z=${parseInt(country.area) > 100000 ? 4 : 6}&output=embed`} className="m-2 rounded-xl"></iframe>
+                    </div>
+                    )}
+                    </div>
+            <div className="relative h-48 my-2 md:h-auto w-96  md:order-last order-first rounded-xl">
+                <Image src={country.flags.svg} alt={country.name.common} fill className="rounded-xl"/>
             </div>
             </article>
 

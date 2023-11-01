@@ -18,6 +18,8 @@ export type Country = {
   };
   borders?: string[];
   cca3: string;
+  area:string;
+  latlng: string[];
 };
 
 async function getData(): Promise<Country[]>  {
