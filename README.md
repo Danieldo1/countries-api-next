@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Country Information App 🔗](https://countries-api-next-sage.vercel.app/country/Gambia)
 
-## Getting Started
+## Overview
+![App Landing page](https://i.ibb.co/FxgdRHm/countries.png)
 
-First, run the development server:
+The Country Information App is a web application built with Next.js and TypeScript that allows users to explore information about various countries around the world. The app utilizes a countries API to fetch data and displays details such as the country's flag, capital, population, region, Google Maps integration, area, and more. Users can click on a specific country's flag to access a unique page with detailed information about that country.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Display flags of various countries on the homepage.
+- Click on a flag to access a dedicated page for that country.
+- Country details page includes:
+  - Country's flag.
+  - Capital city.
+  - Population.
+  - Region.
+  - Google Maps integration to display the country's location.
+  - Area of the country.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js: A React framework for building server-rendered React applications.
+- TypeScript: A statically typed superset of JavaScript.
+- Countries API: An API that provides information about countries, including flag URLs, capital cities, populations, regions, and more.
+- Google Maps API: To display the country's location on a map.
+- Tailwind CSS: For the styling of the application.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. On the homepage, you'll see a list of country flags.
+2. Click on a flag to access a dedicated page for that country.
+3. Explore detailed information about the country, including its flag, capital, population, region, Google Maps integration, and area.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Future Enhancements
 
-## Deploy on Vercel
+Here are some potential future enhancements for the project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Search functionality to quickly find a specific country.
+- Filter countries by region or other criteria.
+- More detailed information about each country, such as currency, language, and timezone.
+- Support for dark mode and other themes.
+- Improved mobile responsiveness.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Country Information App is a useful tool for learning about countries and exploring their unique features. It's built with modern web technologies and can be further improved and expanded to provide even more valuable information to users.
