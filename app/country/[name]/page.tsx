@@ -71,7 +71,7 @@ export default async function Country({params: {name}}: {params: {name: string}}
                     {country.latlng && (
                         <div>
                     <h2 className="text-xl text-gray-800 mt-3"><b>📍 Maps:</b>{" "} </h2>
-                    < iframe src={`//maps.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}&z=${parseInt(country.area) > 100000 ? 4 : 6}&output=embed`} className="m-2 rounded-xl"></iframe>
+                    < iframe src={`//maps.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}&z=${parseInt(country.area) > 200000 ? 3 : 6}&output=embed`} className="m-2 rounded-xl"></iframe>
                     </div>
                     )}
                     </div>
