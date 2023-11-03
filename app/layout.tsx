@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
 import Link from 'next/link'
@@ -18,6 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+ 
   return (
     <html lang="en">
       <body className={nunitoSans.className}>
@@ -25,7 +27,7 @@ export default function RootLayout({
           <nav className="w-full bg-white h-16 flex items-center justify-center">
             <section className="container flex items-center gap-3">
               <Link href="/">
-              <h1 className='font-bold text-2xl  justify-center items-center flex flex-1 '><span className='text-4xl'>🌎</span> Find Country Info</h1>
+              <h1 className='font-bold text-2xl  justify-center items-center flex flex-1 ml-4 '><span className='text-4xl'>🌎</span> Find Country Info</h1>
               </Link>
             </section>
           </nav>

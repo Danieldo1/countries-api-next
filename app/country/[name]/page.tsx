@@ -75,8 +75,8 @@ export default async function Country({params: {name}}: {params: {name: string}}
                     </div>
                     )}
                     </div>
-            <div className="relative h-48 my-2 md:h-auto w-96  md:order-last order-first rounded-xl">
-                <Image src={country.flags.svg} alt={country.name.common} fill className="rounded-xl"/>
+            <div className="relative h-40  object-contain md:h-auto w-96  md:order-last order-first rounded-xl overflow-hidden">
+                <Image src={country.flags.svg} alt={country.name.common} fill className="rounded-xl justify-center items-center object-contain"/>
             </div>
             </article>
 
